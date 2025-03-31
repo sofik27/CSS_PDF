@@ -1,0 +1,28 @@
+
+body {
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    list-style: none;
+    text-decoration: none;
+    position: relative;
+    font-size: 40px;
+    color: #000;
+    padding-left: 80px;
+    margin-bottom: 30px;
+}
+
+a[href$='.pdf']::before {
+    content: '';
+    position: absolute;
+    top: 26px;
+    left: 0;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    background-image: url('images/icon-pdf.svg');
+    background-size: contain;
+}
